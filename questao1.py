@@ -22,11 +22,11 @@ def exibe_heap(nos, heap):
     a = 0
     for i in range(nivel):
         for j in range(2 ** i):
-            print(f'{heap[a]}')
+            print(f'{heap[a]}', end='  ')
             a += 1
         print("")
     for i in range(nos - a):
-        print(f'{heap[a]}')
+        print(f'{heap[a]}', end='  ')
         a += 1
     print('')
 
@@ -49,6 +49,6 @@ for i in range(Q):
                 heap.remove(i)
         heap = ordena_heap(nos, heap)
     elif comando == "3":
-        print(heap)
+        exibe_heap(nos, heap)
 
-print(heap)
+exibe_heap(nos, heap)
